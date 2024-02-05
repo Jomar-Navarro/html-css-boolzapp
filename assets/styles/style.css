@@ -1,0 +1,38 @@
+:root{
+  --green: 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to top,
+    white 0%,
+    white 85%,
+    rgb(0, 150, 136) 50%,
+    rgb(0, 150, 136) 100%
+  );
+}
+
+/************************ 
+        UTILITIES
+ **********************/
+
+.container{
+  margin: 20px auto;
+  width: 1140px;
+}
+
+.debug{
+  border: 1px dashed black;
+}
+
+/************************ 
+        UTILITIES
+ **********************/
