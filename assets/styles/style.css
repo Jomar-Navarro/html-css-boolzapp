@@ -1,5 +1,7 @@
 :root{
-  --green: 
+  --lightgreen: #d5f9ba;
+  --grigetto: #d6dbd8;
+  --celeste: #8edafc;
 }
 
 *{
@@ -51,18 +53,22 @@ body{
 }
 
 .row .col:first-child{
+  background-color: white;
   width: 30%;
+  border-right: 2px solid #d6dbd8 ;
 }
 
 .row .col:nth-child(2){
   width: 70%;
+  background-image: url(../img/mine.jpg);
 }
 
 .user{
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  padding: 0 15px;
+  padding: 0 10px;
+  background-color: white;
 }
 
 .user .avatar{
@@ -74,6 +80,7 @@ body{
 }
 
 .notifications{
+  background-color: var(--celeste);
   align-items: center;
   height: 80px;
 }
@@ -92,23 +99,65 @@ body{
 }
 
 .convo{
-  height: 80px;
+  max-height: 565px;
+  overflow-y: scroll;
 }
 
-.convo .chat{
-  height: 100%;
+.avatar img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.chat{
   align-items: center;
-  padding: 0 10px;
+  height: 80px;
+  padding: 0 20px;
 }
 
-.convo .chat .avatar{
-  padding: 0 15px;
+.chat .text{
+  padding: 0 30px;
 }
 
-.overflow{
+.window-chat{
+  max-height: 80%;
+  height: 80%;
+  overflow-y: scroll;
 }
 
+.window-chat .chat{
+  margin: 20px;
+}
 
+.sent{
+  flex-direction: row-reverse;
+}
+
+.you{
+  background-color: #d5f9ba;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.him-her{
+  margin: 20px auto;
+}
+
+.read{
+  background-color: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.board{
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 10.9%;
+}
 
 /************************ 
           /MAIN
@@ -151,6 +200,21 @@ body{
   .row .col:nth-child(2){
     width: 100%;
   }
+
+  .you, .read{
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+  }
+
+  .you{
+    background-color: var(--lightgreen);
+  }
+
+  .read{
+    background-color: white;
+  }
+
 }
 
 /************************ 
