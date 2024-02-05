@@ -1,7 +1,8 @@
 :root{
   --lightgreen: #d5f9ba;
-  --grigetto: #d6dbd8;
+  --lightgrey: #d6dbd8;
   --celeste: #8edafc;
+  --grigetto: #b1b1b1;
 }
 
 *{
@@ -11,6 +12,7 @@
 }
 
 body{
+  font-family: 'Lato', sans-serif;
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(
@@ -40,6 +42,18 @@ body{
   display: flex;
 }
 
+.align-center{
+  align-items: center;
+}
+
+.s-between{
+  justify-content: space-between;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
 
 /************************ 
         /UTILITIES
@@ -64,8 +78,6 @@ body{
 }
 
 .user{
-  justify-content: space-between;
-  align-items: center;
   height: 70px;
   padding: 0 10px;
   background-color: white;
@@ -75,31 +87,53 @@ body{
   padding: 0 10px;
 }
 
-.user .icons div{
+.user .icons i{
   padding: 0 10px;
+  font-size: 1.5rem;
+  color: var(--grigetto);
 }
 
 .notifications{
   background-color: var(--celeste);
-  align-items: center;
   height: 80px;
 }
 
 .notifications .bell{
-  padding: 0 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: var(--celeste);
+  border-radius: 50%;
+  margin: 0 25px;
 }
 
-.search{
-  padding: 10px;
+.notifications .text p:first-child{
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.notifications .text p:nth-child(2){
+  font-size: 0.8rem;
+  line-height: 20px;
+  font-weight: 600;
+  color: grey;
+  text-decoration: underline;
+}
+
+.search div{
+  margin: 15px 35px;
+  color: var(--grigetto);
 }
 
 .search input{
   width: 100%;
-  padding: 5px;
+  padding: 10px;
+  border: none;
 }
 
 .convo{
-  max-height: 565px;
+  max-height: 545px;
   overflow-y: scroll;
 }
 
@@ -110,13 +144,33 @@ body{
 }
 
 .chat{
-  align-items: center;
   height: 80px;
   padding: 0 20px;
 }
 
 .chat .text{
   padding: 0 30px;
+}
+
+.text p:first-child{
+  font-weight: 700;
+}
+
+.text p:nth-child(2){
+  font-size: small;
+  color: var(--grigetto);
+  line-height: 20px;
+}
+
+.text-chat{
+  padding-left: 20px;
+}
+
+.text-chat p:nth-child(2){
+  color: grey;
+  font-size: small;
+  font-weight: 700;
+  line-height: 20px;
 }
 
 .window-chat{
@@ -126,18 +180,39 @@ body{
 }
 
 .window-chat .chat{
-  margin: 20px;
+  margin: 70px;
 }
 
 .sent{
   flex-direction: row-reverse;
 }
 
-.you{
-  background-color: #d5f9ba;
-  padding: 20px;
+.you, .read{
   width: 400px;
   border-radius: 10px;
+}
+
+.you{
+  background-color: #d5f9ba;
+}
+
+.you p:first-child, .read p:first-child{
+  padding: 20px 20px;
+}
+
+.you i, .read i{
+  color: var(--grigetto);
+}
+
+.you p:nth-child(2), .read p:nth-child(2){
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px 5px 0;
+}
+
+.you p:nth-child(2) span, .read p:nth-child(2) span{
+  font-size: 10px;
+  color: var(--grigetto);
 }
 
 .him-her{
@@ -146,17 +221,23 @@ body{
 
 .read{
   background-color: white;
-  padding: 20px;
-  width: 400px;
-  border-radius: 10px;
 }
 
 .board{
   background-color: white;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 40px;
   height: 10.9%;
+}
+
+.board i{
+  font-size: 1.5rem;
+  color: var(--grigetto);
+}
+
+.board input{
+  width: 80%;
+  border: none;
+  padding: 20px 0;
 }
 
 /************************ 
@@ -185,7 +266,6 @@ body{
   .search, .text{
     display: none;
   }
-
 }
 
 @media screen and (max-width: 542px){
@@ -202,7 +282,6 @@ body{
   }
 
   .you, .read{
-    padding: 20px;
     width: 250px;
     border-radius: 10px;
   }
