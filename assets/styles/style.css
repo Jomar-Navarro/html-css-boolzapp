@@ -255,7 +255,7 @@ body{
   }
 
   .row .col:first-child{
-    width: 10%;
+    width: 14%;
   }
 
   .row .col:nth-child(2){
@@ -266,6 +266,7 @@ body{
   .search, .text{
     display: none;
   }
+
 }
 
 @media screen and (max-width: 542px){
