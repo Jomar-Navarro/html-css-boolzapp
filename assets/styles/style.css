@@ -251,6 +251,7 @@ body{
 
 @media screen and (max-width: 992px){
   .container{
+    margin: 0 auto;
     width: 100%;
   }
 
@@ -267,10 +268,16 @@ body{
     display: none;
   }
 
+  .col:nth-child(2) .icons{
+    display: block;
+    display: flex;
+  }
+
 }
 
 @media screen and (max-width: 542px){
   .container{
+    margin: 0 auto;
     width: 100%;
   }
 
@@ -295,6 +302,9 @@ body{
     background-color: white;
   }
 
+  .col:nth-child(2) .icons{
+    display: none;
+  }
 }
 
 /************************ 
